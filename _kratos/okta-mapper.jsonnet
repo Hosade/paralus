@@ -4,7 +4,8 @@ local claims = std.extVar('claims');
   identity: {
     traits: {
       email: claims.email,
-      //idp_groups: claims.groups,
+      // Temporarily store information about all available claims
+      idp_groups: [std.toString(std.objectFields(claims))],
     },
   },
 }
